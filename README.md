@@ -5,11 +5,13 @@ A simple application that lists all the GitHub repositories of a given user / or
 The Application allows the user to search for a github account and dispalys the following
 
 Name, Email, Location, Bio, Number of Followers and Following and Link to Github Profile
+
 All the public repos of the person (9 in one page)
+
 In each card the application shows the name of the repo, languages used and stared, forked and highlighted numbers. 
 
 ## Hosted Link
-
+https://bejewelled-empanada-63b3c2.netlify.app/
 
 ## Development server
 
