@@ -1,0 +1,74 @@
+<div class="main">
+  <div class="card">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <div class="sidenav">
+            <div class="profile">
+                <img src="{{arrayData['avatar_url']}}" alt="" width="100" height="100">
+          
+                <div class="name">
+                    {{arrayData['name']}}
+                </div>
+                <div class="job">
+                    {{arrayData['company']}}
+                </div>
+            </div>
+          
+            <div class="sidenav-url">
+                <div class="url">
+                    <a href="{{arrayData['html_url']}}" class="active">Profile</a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-8">
+          <div class="card-body">
+            <i class="fa fa-pen fa-xs edit"></i>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>:</td>
+                        <td>{{arrayData['name']}}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td>{{arrayData['email']}}</td>
+                    </tr>
+                    <tr>
+                        <td>Location</td>
+                        <td>:</td>
+                        <td>{{arrayData['location']}}</td>
+                    </tr>
+                    <tr>
+                        <td>Bio</td>
+                        <td>:</td>
+                        <td>{{arrayData['bio']}}</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="chip">
+                          <td>Followers</td>
+                          <td>:</td>
+                          <td>{{arrayData['followers']}}</td>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="chip">
+                          <td>Following</td>
+                          <td>:</td>
+                          <td>{{arrayData['following']}}</td>
+                        </div>
+                      </td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
