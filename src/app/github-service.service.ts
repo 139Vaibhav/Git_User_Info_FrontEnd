@@ -19,11 +19,13 @@ export class GithubServiceService {
 
   constructor(private http: HttpClient) { }
 
-  configUrl = 'https://kind-pink-giraffe-boot.cyclic.app/api/v1';
+  // configUrl = 'https://kind-pink-giraffe-boot.cyclic.app/api/v1';
+  configUrl = 'https://api.github.com';
 
 
   getUser(userName: string): Observable<UserArray[]> {
-    const url = `${this.configUrl}/userInfo/${userName}`
+    // const url = `${this.configUrl}/userInfo/${userName}`
+    const url = `${this.configUrl}/users/${userName}`
     return this.http.get<UserArray[]>(url)
       .pipe(
         catchError(this.handleError('fetch users', []))
@@ -31,7 +33,7 @@ export class GithubServiceService {
   }
 
   getRepos(userName: string, pageNum: number): Observable<RepoArray[]> {
-    const url = `${this.configUrl}/repoInfo/${userName}?page=${pageNum}`
+    const url = `${this.configUrl}/users/${userName}/repos?per_page=9&page=${pageNum}`
     return this.http.get<RepoArray[]>(url)
       .pipe(
         catchError(this.handleError('fetch users', []))

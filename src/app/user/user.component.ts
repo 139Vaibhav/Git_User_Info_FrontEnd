@@ -80,7 +80,7 @@ export class UserComponent implements OnInit {
   fetchUserInfo(UserName): void {
     this._githubServiceService.getUser(UserName).subscribe(data => {
       this.userArrays = data;
-      console.log("userArray is ", this.userArrays);
+      console.log("userArray is ", typeof (this.userArrays));
       if (this.userArrays == undefined || this.userArrays && this.userArrays.length == 0) {
         console.log("Could not find userInfo");
         this.NoUser = true;
