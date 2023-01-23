@@ -31,7 +31,7 @@ export class GithubServiceService {
   }
 
   getRepos(userName: string, pageNum: number): Observable<RepoArray[]> {
-    const url = `${this.configUrl}/repoInfo/${userName}?page=${pageNum}`
+    const url = `${this.configUrl}/repoPageInfo/${userName}?page=${pageNum}`
     return this.http.get<RepoArray[]>(url)
       .pipe(
         catchError(this.handleError('fetch users', []))

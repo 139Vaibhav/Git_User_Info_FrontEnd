@@ -61,7 +61,7 @@ export class UserComponent implements OnInit {
 
   fetchUser(UserName): void {
     this._githubServiceService.getRepos(UserName, this.pageNum).subscribe(data => {
-      this.repoArrays = data;
+      this.repoArrays = data['finaldata'][0];
       console.log("repoArray is ", this.repoArrays);
       if (this.repoArrays == undefined || this.repoArrays && this.repoArrays.length == 0) {
         console.log("Could not find reporray")
@@ -79,8 +79,8 @@ export class UserComponent implements OnInit {
 
   fetchUserInfo(UserName): void {
     this._githubServiceService.getUser(UserName).subscribe(data => {
-      this.userArrays = data;
-      console.log("userArray is ", typeof (this.userArrays));
+      this.userArrays = data['finaldata'][0];
+      console.log("userArray is ", this.userArrays);
       if (this.userArrays == undefined || this.userArrays && this.userArrays.length == 0) {
         console.log("Could not find userInfo");
         this.NoUser = true;
